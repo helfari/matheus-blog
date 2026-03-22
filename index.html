@@ -4,59 +4,176 @@
 <head>
 
 <meta charset="UTF-8">
+<title>Ciência com Matheus</title>
 
-<title>Ciência com Matheus Faria</title>
+<style>
 
-<link rel="stylesheet" href="css/style.css">
+body{
+margin:0;
+font-family:Arial;
+background:#e6ecf5;
+}
+
+/* CONTAINER */
+#container{
+width:1000px;
+margin:auto;
+background:white;
+}
+
+/* HEADER */
+#header{
+background:#0f3b82;
+color:white;
+padding:20px;
+}
+
+#header h1{
+margin:0;
+}
+
+/* CONTENT */
+#content{
+display:flex;
+}
+
+/* SIDEBAR */
+#sidebar{
+width:250px;
+background:#f2f2f2;
+padding:15px;
+}
+
+#sidebar h3{
+margin-top:0;
+}
+
+#sidebar a{
+display:block;
+text-decoration:none;
+color:#333;
+margin:8px 0;
+}
+
+#sidebar a:hover{
+text-decoration:underline;
+}
+
+/* POSTS */
+#main{
+flex:1;
+padding:20px;
+}
+
+/* POST */
+.post{
+margin-bottom:25px;
+padding-bottom:15px;
+border-bottom:1px solid #ddd;
+}
+
+.post h2{
+margin:0;
+color:#0f3b82;
+}
+
+/* FOOTER */
+#footer{
+background:#0f3b82;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+
+/* VIDEO */
+video{
+width:100%;
+margin-top:10px;
+border-radius:8px;
+}
+
+</style>
 
 </head>
 
 <body>
 
-<div class="layout">
+<div id="container">
 
-<aside class="sidebar">
+<!-- HEADER -->
+<div id="header">
+<h1>🔬 Ciência com Matheus</h1>
+<p>Aprendendo ciência na prática</p>
+</div>
 
-<h2>🔬 Ciência</h2>
+<!-- CONTENT -->
+<div id="content">
 
-<ul>
+<!-- SIDEBAR -->
+<div id="sidebar">
 
-<li><a href="index.html">Início</a></li>
-<li><a href="sobre.html">Sobre</a></li>
+<h3>📚 Menu</h3>
 
-<li><b>Postagens</b></li>
+<a href="#">Início</a>
+<a href="#">Sobre</a>
 
-<li><a href="posts/efeito-estufa.html">Efeito Estufa</a></li>
-<li><a href="posts/experimento.html">Experimento</a></li>
+<h3>📝 Postagens</h3>
 
-</ul>
+<a href="#">Efeito Estufa</a>
 
-</aside>
+</div>
 
-<main class="content">
+<!-- MAIN -->
+<div id="main">
 
-<div class="card">
+<!-- APRESENTAÇÃO -->
+<div class="post">
 
-<h1>Bem-vindo</h1>
+<h2>👋 Apresentação</h2>
 
 <p>
-Olá! Meu nome é Matheus Henrique, tenho 12 anos e sou aluno da turma da
-7ª série da Escola Prisma.
+Olá! Meu nome é Matheus Henrique, tenho 12 anos e sou aluno da 7ª série da Escola Prisma.
 </p>
 
 <p>
-Este blog foi criado para compartilhar os assuntos que estou estudando
-nas aulas de Ciências, além de publicar experimentos e curiosidades científicas.
-</p>
-
-<p>
-Aqui você encontrará textos, imagens e vídeos sobre atividades
-científicas realizadas durante meus estudos.
+Este site foi criado para compartilhar meus estudos de Ciências, incluindo experimentos e vídeos.
 </p>
 
 </div>
 
-</main>
+<!-- POST -->
+<div class="post">
+
+<h2>🔥 Efeito Estufa</h2>
+
+<p>
+O efeito estufa é um fenômeno natural que mantém a Terra aquecida.
+Alguns gases da atmosfera seguram o calor do Sol.
+</p>
+
+<p>
+Quando aumenta demais, pode causar aquecimento global e mudanças climáticas.
+</p>
+
+<!-- VIDEO S3 -->
+<video controls>
+<source src="https://SEU-BUCKET.s3.amazonaws.com/video1.mp4">
+</video>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<div id="footer">
+
+<p>© 2026 Ciência com Matheus</p>
+<p>Contato: mhsantosfaria@gmail.com</p>
+
+</div>
 
 </div>
 
