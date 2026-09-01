@@ -14,51 +14,82 @@
 
 <style>
 
-/* CONTEÚDO DA POSTAGEM */
-.post {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+/* AJUSTES VISUAIS */
+
+.card {
+    max-width: 900px;
+    margin: auto;
 }
 
-/* VÍDEO */
-.video-container {
-    width: 300px;
-    margin: 20px auto;
-}
-
-.video-container iframe {
-    width: 100%;
-    height: 169px;
-    border: none;
-    border-radius: 10px;
-}
-
-/* IMAGENS */
-.post img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* TÍTULOS */
-.post h1 {
+h1 {
     color: #0f3b82;
 }
 
-.post h2 {
-    color: #0f3b82;
+h2 {
+    margin-top: 25px;
+    color: #333;
 }
 
-/* PARÁGRAFOS */
-.post p {
+ul {
+    padding-left: 20px;
+}
+
+.back-link {
+    margin-bottom: 15px;
+    display: inline-block;
+    text-decoration: none;
+    color: #0072ff;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* POST */
+
+.post-efeito {
+    max-width: 900px;
+    margin: 0 auto;
     line-height: 1.6;
 }
 
-/* LISTAS */
-.post li {
-    margin-bottom: 8px;
+.post-efeito h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.post-efeito h2 {
+    margin-top: 30px;
+}
+
+.post-efeito p {
+    font-size: 17px;
+}
+
+
+/* VÍDEO */
+
+.post-efeito video {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+
+/* IMAGENS */
+
+.post-efeito img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 18px auto;
+    border-radius: 10px;
 }
 
 </style>
@@ -110,31 +141,40 @@
 
 <main class="content">
 
-<div class="post">
+<div class="card">
+
+<a href="../index.html" class="back-link">
+⬅ Voltar para página inicial
+</a>
+
+<article class="post-efeito">
 
 <h1>🌍 Efeito Estufa</h1>
 
 <p>
-O efeito estufa é um fenômeno natural que ajuda a manter a temperatura da Terra
-adequada para a existência de vida.
+O efeito estufa é um fenômeno natural que ajuda a manter a temperatura
+da Terra adequada para a existência de vida.
 </p>
 
 <p>
-Ele acontece porque alguns gases presentes na atmosfera conseguem reter parte
-do calor recebido do Sol.
+Ele acontece porque alguns gases presentes na atmosfera conseguem reter
+parte do calor recebido do Sol.
 </p>
 
+
+<!-- COMO FUNCIONA -->
 
 <h2>☀️ Como funciona o efeito estufa?</h2>
 
 <p>
-A luz do Sol chega até a superfície da Terra. Parte dessa energia é absorvida
-pelo solo, pelos oceanos e pelas plantas.
+A luz do Sol chega até a superfície da Terra. Parte dessa energia é
+absorvida pelo solo, pelos oceanos e pelas plantas.
 </p>
 
 <p>
 A superfície terrestre libera parte desse calor de volta para a atmosfera.
-Alguns gases atmosféricos retêm parte desse calor, mantendo o planeta aquecido.
+Alguns gases atmosféricos retêm parte desse calor, mantendo o planeta
+aquecido.
 </p>
 
 
@@ -142,62 +182,86 @@ Alguns gases atmosféricos retêm parte desse calor, mantendo o planeta aquecido
 
 <h2>🎥 Vídeo educativo</h2>
 
-<div class="video-container">
+<video controls preload="metadata">
 
-<iframe
-src="URL_DO_VIDEO"
-title="Vídeo sobre o Efeito Estufa"
-allowfullscreen>
-</iframe>
+    <source
+        src="https://matheusfaria-blog-objects.s3.us-east-1.amazonaws.com/efeito-estufa.mp4"
+        type="video/mp4"
+    >
 
-</div>
+    Seu navegador não suporta a reprodução de vídeos.
 
+</video>
+
+
+<!-- AUMENTO DO EFEITO ESTUFA -->
 
 <h2>🌡️ Aumento do efeito estufa</h2>
 
 <p>
-O problema acontece quando a quantidade de gases de efeito estufa aumenta muito
-na atmosfera. Isso pode contribuir para o aumento da temperatura média do planeta.
+O problema acontece quando a quantidade de gases de efeito estufa aumenta
+muito na atmosfera. Isso pode contribuir para o aumento da temperatura
+média do planeta.
 </p>
 
 <p>
-Entre as atividades humanas que aumentam a emissão desses gases estão a queima
-de combustíveis fósseis, o desmatamento e algumas atividades industriais.
+Entre as atividades humanas que aumentam a emissão desses gases estão
+a queima de combustíveis fósseis, o desmatamento e algumas atividades
+industriais.
 </p>
 
+
+<!-- CONSEQUÊNCIAS -->
 
 <h2>🌱 Consequências</h2>
 
 <ul>
 
-<li>Aumento da temperatura média do planeta;</li>
+<li>
+Aumento da temperatura média do planeta;
+</li>
 
-<li>Derretimento de geleiras;</li>
+<li>
+Derretimento de geleiras;
+</li>
 
-<li>Elevação do nível dos oceanos;</li>
+<li>
+Elevação do nível dos oceanos;
+</li>
 
-<li>Alterações no clima;</li>
+<li>
+Alterações no clima;
+</li>
 
-<li>Impactos nos animais e nas plantas.</li>
+<li>
+Impactos nos animais e nas plantas.
+</li>
 
 </ul>
 
 
+<!-- CURIOSIDADE -->
+
 <h2>💡 Curiosidade</h2>
 
 <p>
-Sem o efeito estufa natural, a Terra seria muito mais fria e provavelmente não
-teria condições adequadas para a vida como conhecemos.
+Sem o efeito estufa natural, a Terra seria muito mais fria e provavelmente
+não teria condições adequadas para a vida como conhecemos.
 </p>
 
+
+<!-- CONCLUSÃO -->
 
 <h2>✅ Conclusão</h2>
 
 <p>
-O efeito estufa é importante para a vida na Terra, mas o aumento excessivo dos
-gases de efeito estufa pode causar mudanças no clima. Por isso, é importante
-preservar o meio ambiente e diminuir a emissão de gases poluentes.
+O efeito estufa é importante para a vida na Terra, mas o aumento excessivo
+dos gases de efeito estufa pode causar mudanças no clima. Por isso, é
+importante preservar o meio ambiente e diminuir a emissão de gases
+poluentes.
 </p>
+
+</article>
 
 </div>
 
