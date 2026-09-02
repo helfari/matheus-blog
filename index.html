@@ -17,29 +17,43 @@
 
 <body>
 
-<header class="site-header">
+<!-- =========================================
+     BARRA SUPERIOR
+========================================= -->
+
+<header class="topbar">
 
 ```
-<div class="header-container">
+<div class="topbar-container">
 
     <a href="index.html" class="logo">
 
         <span class="logo-icon">🧪</span>
 
         <span>
-            <small>CIÊNCIA COM</small>
-            <strong>MATHEUS</strong>
+            Ciência com Matheus
         </span>
 
     </a>
 
 
-    <nav class="main-nav">
+    <nav class="nav">
 
-        <a href="index.html" class="active">⌂ Início</a>
-        <a href="#sobre">♙ Sobre</a>
-        <a href="#trabalhos">▤ Trabalhos</a>
-        <a href="#contato">✉ Contato</a>
+        <a href="index.html" class="active">
+            Início
+        </a>
+
+        <a href="#sobre">
+            Sobre
+        </a>
+
+        <a href="#trabalhos">
+            Trabalhos
+        </a>
+
+        <a href="#contato">
+            Contato
+        </a>
 
     </nav>
 
@@ -48,14 +62,20 @@
 
 </header>
 
-<section class="hero">
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="home-hero">
 
 ```
-<div class="hero-container">
+<div class="hero-inner">
 
-    <div class="hero-content">
+    <div class="hero-text">
 
-        <span class="hero-label">BEM-VINDO!</span>
+        <span class="hero-tag">
+            CIÊNCIA • ESTUDOS • CONHECIMENTO
+        </span>
 
         <h1>
             Ciência que inspira,
@@ -63,19 +83,44 @@
         </h1>
 
         <p>
-            Aqui compartilho estudos, projetos e trabalhos
-            sobre temas que fazem parte do nosso dia a dia
-            e do mundo da ciência.
+            Um espaço para compartilhar trabalhos, estudos
+            e conteúdos sobre ciência, saúde, meio ambiente
+            e temas importantes do nosso dia a dia.
         </p>
 
-        <a href="#trabalhos" class="hero-button">
-            🚀 Explorar publicações
-        </a>
+        <div class="hero-buttons">
+
+            <a href="#trabalhos" class="hero-button">
+                Explorar trabalhos →
+            </a>
+
+            <a href="#sobre" class="hero-button secondary">
+                Conheça o projeto
+            </a>
+
+        </div>
 
     </div>
 
-    <div class="hero-icon">
-        ⚛
+
+    <div class="hero-visual">
+
+        <div class="science-icon">
+            ⚛️
+        </div>
+
+        <div class="floating-card card-one">
+            🔬 Ciência
+        </div>
+
+        <div class="floating-card card-two">
+            🌱 Meio ambiente
+        </div>
+
+        <div class="floating-card card-three">
+            💡 Conhecimento
+        </div>
+
     </div>
 
 </div>
@@ -83,31 +128,41 @@
 
 </section>
 
-<section class="publications" id="trabalhos">
+<!-- =========================================
+     TRABALHOS
+========================================= -->
+
+<section class="home-section" id="trabalhos">
 
 ```
-<div class="section-heading">
+<div class="section-header">
 
-    <span class="section-label">PUBLICAÇÕES</span>
+    <span class="section-tag">
+        PUBLICAÇÕES
+    </span>
 
-    <h2>Últimos trabalhos</h2>
+    <h2>
+        Trabalhos e projetos
+    </h2>
 
     <p>
-        Trabalhos e conteúdos para compartilhar conhecimento
-        e novas ideias.
+        Conheça alguns dos trabalhos desenvolvidos
+        e compartilhados no projeto.
     </p>
 
 </div>
 
 
-<div class="posts-grid">
+<div class="modern-cards">
 
 
-    <!-- EFEITO ESTUFA -->
+    <!-- =====================================
+         EFEITO ESTUFA
+    ====================================== -->
 
-    <article class="post-card">
+    <a href="posts/efeito-estufa.html" class="modern-card">
 
-        <div class="post-image">
+        <div class="modern-card-image">
 
             <img
                 src="https://matheusfaria-blog-objects.s3.us-east-1.amazonaws.com/efeito-estufa.png"
@@ -115,45 +170,41 @@
                 loading="lazy"
             >
 
-        </div>
-
-        <div class="post-body">
-
-            <span class="post-category category-environment">
-                🌱 MEIO AMBIENTE
+            <span class="modern-card-category">
+                🌱 Meio ambiente
             </span>
 
+        </div>
+
+
+        <div class="modern-card-content">
+
             <h3>
-                Efeito Estufa: o que é e quais são as consequências?
+                Efeito Estufa
             </h3>
 
             <p>
-                Entenda o que é o efeito estufa, como ele acontece
-                e quais são seus impactos no planeta.
+                Entenda o que é o efeito estufa, como ele
+                funciona e quais são suas consequências
+                para o planeta.
             </p>
 
-            <div class="post-footer">
-
-                <span class="post-date">
-                    📚 Trabalho de Ciências
-                </span>
-
-                <a href="posts/efeito-estufa.html" class="post-link">
-                    Ler mais →
-                </a>
-
-            </div>
+            <span class="modern-card-link">
+                Ler trabalho →
+            </span>
 
         </div>
 
-    </article>
+    </a>
 
 
-    <!-- VACINAÇÃO -->
+    <!-- =====================================
+         VACINAÇÃO
+    ====================================== -->
 
-    <article class="post-card">
+    <a href="posts/vacinacao.html" class="modern-card">
 
-        <div class="post-image">
+        <div class="modern-card-image">
 
             <img
                 src="https://matheusfaria-blog-objects.s3.us-east-1.amazonaws.com/vacinacao.png"
@@ -161,45 +212,41 @@
                 loading="lazy"
             >
 
+            <span class="modern-card-category">
+                ❤️ Saúde
+            </span>
+
         </div>
 
-        <div class="post-body">
 
-            <span class="post-category category-health">
-                ❤️ SAÚDE
-            </span>
+        <div class="modern-card-content">
 
             <h3>
                 A importância da vacinação
             </h3>
 
             <p>
-                Veja por que as vacinas são fundamentais para a
-                nossa saúde e para a saúde de toda a comunidade.
+                Saiba por que a vacinação é importante para
+                a proteção individual e para a saúde de toda
+                a comunidade.
             </p>
 
-            <div class="post-footer">
-
-                <span class="post-date">
-                    📚 Trabalho de Ciências
-                </span>
-
-                <a href="posts/vacinacao.html" class="post-link">
-                    Ler mais →
-                </a>
-
-            </div>
+            <span class="modern-card-link">
+                Ler trabalho →
+            </span>
 
         </div>
 
-    </article>
+    </a>
 
 
-    <!-- CYBERBULLYING -->
+    <!-- =====================================
+         CYBERBULLYING
+    ====================================== -->
 
-    <article class="post-card">
+    <a href="posts/cyberbullying.html" class="modern-card">
 
-        <div class="post-image">
+        <div class="modern-card-image">
 
             <img
                 src="https://matheusfaria-blog-objects.s3.us-east-1.amazonaws.com/cyberbullying.png"
@@ -207,38 +254,32 @@
                 loading="lazy"
             >
 
-        </div>
-
-        <div class="post-body">
-
-            <span class="post-category category-digital">
-                🌐 CIDADANIA DIGITAL
+            <span class="modern-card-category">
+                🌐 Cidadania digital
             </span>
 
+        </div>
+
+
+        <div class="modern-card-content">
+
             <h3>
-                Cyberbullying: na internet, respeito também importa!
+                Cyberbullying
             </h3>
 
             <p>
-                Entenda o que é cyberbullying, como ele acontece
-                e o que podemos fazer para combater esse problema.
+                Entenda o que é cyberbullying e como podemos
+                ajudar a combater a violência e o desrespeito
+                no ambiente digital.
             </p>
 
-            <div class="post-footer">
-
-                <span class="post-date">
-                    📚 Trabalho de Ciências
-                </span>
-
-                <a href="posts/cyberbullying.html" class="post-link">
-                    Ler mais →
-                </a>
-
-            </div>
+            <span class="modern-card-link">
+                Ler trabalho →
+            </span>
 
         </div>
 
-    </article>
+    </a>
 
 
 </div>
@@ -246,40 +287,146 @@
 
 </section>
 
-<section class="about-project" id="sobre">
+<!-- =========================================
+     TÓPICOS
+========================================= -->
+
+<section class="topics-section">
 
 ```
-<div class="about-container">
+<div class="section-header">
 
-    <span class="section-label">SOBRE</span>
+    <span class="section-tag">
+        TEMAS
+    </span>
 
-    <h2>🔬 Sobre o projeto</h2>
+    <h2>
+        Conhecimento em diferentes áreas
+    </h2>
 
     <p>
-        O <strong>Ciência com Matheus</strong> é um espaço
-        criado para compartilhar trabalhos, pesquisas e
-        aprendizados de forma simples, visual e acessível.
+        Aprender também é descobrir novas formas de
+        compreender o mundo.
     </p>
 
 </div>
+
+
+<div class="topics-grid">
+
+
+    <div class="topic">
+
+        <div class="topic-icon">
+            🔬
+        </div>
+
+        <h3>
+            Ciência
+        </h3>
+
+        <p>
+            Trabalhos e conteúdos para aprender ciência
+            de maneira simples e acessível.
+        </p>
+
+    </div>
+
+
+    <div class="topic">
+
+        <div class="topic-icon">
+            🌱
+        </div>
+
+        <h3>
+            Meio ambiente
+        </h3>
+
+        <p>
+            Informações sobre o planeta, sustentabilidade
+            e os impactos das ações humanas.
+        </p>
+
+    </div>
+
+
+    <div class="topic">
+
+        <div class="topic-icon">
+            💡
+        </div>
+
+        <h3>
+            Conhecimento
+        </h3>
+
+        <p>
+            Estudos e projetos que transformam curiosidade
+            em aprendizado.
+        </p>
+
+    </div>
+
+
+</div>
 ```
 
 </section>
+
+<!-- =========================================
+     SOBRE
+========================================= -->
+
+<section class="about-home" id="sobre">
+
+```
+<div>
+
+    <span class="section-tag">
+        SOBRE O PROJETO
+    </span>
+
+    <h2>
+        Ciência com Matheus
+    </h2>
+
+    <p>
+        Este espaço foi criado para reunir trabalhos,
+        pesquisas e aprendizados desenvolvidos ao longo
+        dos estudos, compartilhando conhecimento de uma
+        maneira simples, visual e acessível.
+    </p>
+
+    <a href="#contato" class="text-button">
+        Saiba mais →
+    </a>
+
+</div>
+
+
+<div class="about-symbol">
+    🧪
+</div>
+```
+
+</section>
+
+<!-- =========================================
+     RODAPÉ
+========================================= -->
 
 <footer class="site-footer" id="contato">
 
 ```
-<div class="footer-container">
+<p>
+    © 2026 Ciência com Matheus.
+    Todos os direitos reservados.
+</p>
 
-    <p>
-        © 2026 Ciência com Matheus. Todos os direitos reservados.
-    </p>
-
-    <p>
-        Curiosidade, estudo e dedicação movem o conhecimento! 🧪
-    </p>
-
-</div>
+<p>
+    Curiosidade, estudo e dedicação movem o conhecimento! 🧪
+</p>
 ```
 
 </footer>
