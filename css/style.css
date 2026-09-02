@@ -1,11 +1,58 @@
-/* =========================================
-   HOME MODERNA
-========================================= */
+/* =========================================================
+   CIÊNCIA COM MATHEUS
+   STYLE.CSS
+   ========================================================= */
 
 
-/* =========================================
+/* =========================================================
+   RESET / CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background: #f8fbff;
+
+    color: #34495e;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* =========================================================
    BARRA SUPERIOR
-========================================= */
+   ========================================================= */
 
 .topbar {
     position: sticky;
@@ -14,26 +61,37 @@
 
     z-index: 2000;
 
-    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
 
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.96);
 
-    border-bottom: 1px solid #e6edf5;
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #e5edf5;
+
+    box-shadow:
+        0 2px 12px rgba(15, 59, 130, 0.04);
 }
 
 
 .topbar-container {
+    width: 100%;
+
     max-width: 1200px;
 
-    margin: auto;
+    min-height: 70px;
 
-    padding: 16px 25px;
+    margin: 0 auto;
+
+    padding: 14px 25px;
 
     display: flex;
 
     align-items: center;
 
     justify-content: space-between;
+
+    gap: 30px;
 }
 
 
@@ -46,11 +104,11 @@
 
     gap: 10px;
 
+    flex-shrink: 0;
+
     color: #123f85;
 
     text-decoration: none;
-
-    font-family: "Poppins", sans-serif;
 
     font-size: 18px;
 
@@ -59,7 +117,21 @@
 
 
 .logo-icon {
-    font-size: 25px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 11px;
+
+    background: #eaf3ff;
+
+    font-size: 22px;
 }
 
 
@@ -70,12 +142,20 @@
 
     align-items: center;
 
-    gap: 8px;
+    justify-content: flex-end;
+
+    gap: 5px;
 }
 
 
 .nav a {
-    padding: 9px 15px;
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 9px 14px;
 
     border-radius: 9px;
 
@@ -87,7 +167,10 @@
 
     font-weight: 600;
 
-    transition: 0.25s ease;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
 
@@ -95,6 +178,8 @@
     background: #eef5ff;
 
     color: #1557a6;
+
+    transform: translateY(-1px);
 }
 
 
@@ -105,45 +190,76 @@
 }
 
 
-/* =========================================
-   HERO
-========================================= */
+/* =========================================================
+   HERO DA HOME
+   ========================================================= */
 
 .home-hero {
-    min-height: 560px;
+    position: relative;
+
+    min-height: 540px;
 
     display: flex;
 
     align-items: center;
 
+    overflow: hidden;
+
     background:
         radial-gradient(
-            circle at 80% 20%,
-            rgba(70, 150, 255, 0.18),
+            circle at 82% 20%,
+            rgba(70, 150, 255, 0.20),
             transparent 30%
         ),
         linear-gradient(
             135deg,
-            #eef6ff,
-            #ffffff 65%
+            #eef6ff 0%,
+            #ffffff 70%
         );
 }
 
 
+.home-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    right: -120px;
+
+    bottom: -180px;
+
+    border-radius: 50%;
+
+    background: rgba(25, 118, 210, 0.06);
+
+    pointer-events: none;
+}
+
+
 .hero-inner {
+    position: relative;
+
+    z-index: 1;
+
     width: 100%;
 
     max-width: 1200px;
 
-    margin: auto;
+    margin: 0 auto;
 
-    padding: 70px 25px;
+    padding: 75px 25px;
 
     display: grid;
 
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(300px, 0.85fr);
 
-    gap: 50px;
+    gap: 55px;
 
     align-items: center;
 }
@@ -164,9 +280,9 @@
 
     font-size: 12px;
 
-    font-weight: 700;
+    font-weight: 800;
 
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
 }
 
 
@@ -175,9 +291,9 @@
 
     color: #123f85;
 
-    font-family: "Poppins", sans-serif;
+    font-size: clamp(42px, 5vw, 64px);
 
-    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 800;
 
     line-height: 1.08;
 
@@ -195,19 +311,19 @@
 .hero-text p {
     max-width: 620px;
 
-    margin: 25px 0;
+    margin: 25px 0 0;
 
     color: #526579;
 
     font-size: 18px;
 
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 
-/* =========================================
+/* =========================================================
    BOTÕES DO HERO
-========================================= */
+   ========================================================= */
 
 .hero-buttons {
     display: flex;
@@ -216,20 +332,26 @@
 
     gap: 12px;
 
-    margin-top: 28px;
+    margin-top: 30px;
 }
 
 
 .hero-button {
-    display: inline-block;
+    display: inline-flex;
 
-    padding: 13px 21px;
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 46px;
+
+    padding: 12px 21px;
 
     border-radius: 10px;
 
     background: #1565c0;
 
-    color: white;
+    color: #ffffff;
 
     text-decoration: none;
 
@@ -238,9 +360,12 @@
     font-weight: 700;
 
     box-shadow:
-        0 6px 15px rgba(21, 101, 192, 0.20);
+        0 7px 18px rgba(21, 101, 192, 0.20);
 
-    transition: 0.25s ease;
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 
@@ -248,11 +373,14 @@
     background: #0d47a1;
 
     transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(21, 101, 192, 0.25);
 }
 
 
 .hero-button.secondary {
-    background: white;
+    background: #ffffff;
 
     color: #1557a6;
 
@@ -264,12 +392,14 @@
 
 .hero-button.secondary:hover {
     background: #f4f8fd;
+
+    border-color: #bfd5ed;
 }
 
 
-/* =========================================
+/* =========================================================
    VISUAL DO HERO
-========================================= */
+   ========================================================= */
 
 .hero-visual {
     position: relative;
@@ -278,13 +408,17 @@
 
     display: flex;
 
-    justify-content: center;
-
     align-items: center;
+
+    justify-content: center;
 }
 
 
 .science-icon {
+    position: relative;
+
+    z-index: 2;
+
     width: 190px;
 
     height: 190px;
@@ -297,21 +431,39 @@
 
     border-radius: 50%;
 
-    background: white;
+    background: #ffffff;
 
-    font-size: 90px;
+    font-size: 85px;
 
     box-shadow:
-        0 20px 50px rgba(15, 59, 130, 0.12);
+        0 20px 55px rgba(15, 59, 130, 0.13);
+
+    animation:
+        scienceFloat 5s ease-in-out infinite;
+}
+
+
+@keyframes scienceFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 
 .floating-card {
     position: absolute;
 
+    z-index: 3;
+
     padding: 11px 17px;
 
-    background: white;
+    background: rgba(255, 255, 255, 0.96);
 
     border: 1px solid #e2eaf3;
 
@@ -321,7 +473,7 @@
 
     font-size: 13px;
 
-    font-weight: 600;
+    font-weight: 700;
 
     box-shadow:
         0 8px 25px rgba(15, 59, 130, 0.10);
@@ -329,51 +481,63 @@
 
 
 .card-one {
-    top: 45px;
+    top: 40px;
 
-    right: 15px;
+    right: 10px;
 }
 
 
 .card-two {
-    bottom: 60px;
+    bottom: 55px;
 
-    left: 10px;
+    left: 5px;
 }
 
 
 .card-three {
-    bottom: 15px;
+    right: 35px;
 
-    right: 45px;
+    bottom: 5px;
 }
 
 
-/* =========================================
-   SEÇÕES
-========================================= */
+/* =========================================================
+   SEÇÕES DA HOME
+   ========================================================= */
 
-.home-section,
-.topics-section {
+.home-section {
+    width: 100%;
+
     max-width: 1200px;
 
-    margin: auto;
+    margin: 0 auto;
 
     padding: 80px 25px;
 }
 
 
 .section-header {
-    margin-bottom: 35px;
+    max-width: 760px;
+
+    margin: 0 auto 40px;
+
+    text-align: center;
+}
+
+
+.section-header .section-tag {
+    margin-bottom: 10px;
 }
 
 
 .section-header h2 {
-    margin: 0 0 10px;
+    margin: 0 0 12px;
 
     color: #123f85;
 
-    font-size: 32px;
+    font-size: clamp(28px, 4vw, 36px);
+
+    line-height: 1.2;
 }
 
 
@@ -383,27 +547,37 @@
     color: #607286;
 
     font-size: 16px;
+
+    line-height: 1.7;
 }
 
 
-/* =========================================
-   CARDS MODERNOS
-========================================= */
+/* =========================================================
+   CARDS DOS TRABALHOS
+   ========================================================= */
 
 .modern-cards {
     display: grid;
 
     grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        repeat(3, minmax(0, 1fr));
 
-    gap: 28px;
+    gap: 26px;
+
+    align-items: stretch;
 }
 
 
 .modern-card {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
     overflow: hidden;
 
-    background: white;
+    background: #ffffff;
 
     border: 1px solid #e3eaf3;
 
@@ -416,12 +590,15 @@
 
     transition:
         transform 0.3s ease,
-        box-shadow 0.3s ease;
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
 
 .modern-card:hover {
     transform: translateY(-7px);
+
+    border-color: #d2e2f3;
 
     box-shadow:
         0 18px 40px rgba(15, 59, 130, 0.13);
@@ -433,9 +610,13 @@
 .modern-card-image {
     position: relative;
 
-    height: 240px;
+    width: 100%;
+
+    height: 220px;
 
     overflow: hidden;
+
+    background: #eaf3ff;
 }
 
 
@@ -446,12 +627,13 @@
 
     object-fit: cover;
 
-    transition: transform 0.4s ease;
+    transition:
+        transform 0.4s ease;
 }
 
 
-.modern-card:hover img {
-    transform: scale(1.04);
+.modern-card:hover .modern-card-image img {
+    transform: scale(1.045);
 }
 
 
@@ -460,28 +642,38 @@
 .modern-card-category {
     position: absolute;
 
-    left: 18px;
+    left: 16px;
 
-    bottom: 18px;
+    bottom: 16px;
+
+    max-width: calc(100% - 32px);
 
     padding: 7px 12px;
 
     border-radius: 20px;
 
-    background: rgba(255, 255, 255, 0.94);
+    background: rgba(255, 255, 255, 0.95);
 
     color: #1557a6;
 
-    font-size: 12px;
+    font-size: 11px;
 
-    font-weight: 700;
+    font-weight: 800;
+
+    white-space: nowrap;
 }
 
 
 /* CONTEÚDO */
 
 .modern-card-content {
-    padding: 25px;
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 24px;
 }
 
 
@@ -490,7 +682,9 @@
 
     color: #123f85;
 
-    font-size: 23px;
+    font-size: 22px;
+
+    line-height: 1.3;
 }
 
 
@@ -508,24 +702,32 @@
 .modern-card-link {
     display: inline-block;
 
-    margin-top: 18px;
+    margin-top: auto;
+
+    padding-top: 18px;
 
     color: #1769aa;
 
     font-size: 14px;
 
-    font-weight: 700;
+    font-weight: 800;
 }
 
 
-/* =========================================
+/* =========================================================
    TÓPICOS
-========================================= */
+   ========================================================= */
 
 .topics-section {
-    max-width: none;
+    width: 100%;
+
+    padding: 80px 25px;
 
     background: #f8fbff;
+
+    border-top: 1px solid #edf2f7;
+
+    border-bottom: 1px solid #edf2f7;
 }
 
 
@@ -543,16 +745,18 @@
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3, minmax(0, 1fr));
 
     gap: 22px;
 }
 
 
 .topic {
+    min-width: 0;
+
     padding: 28px;
 
-    background: white;
+    background: #ffffff;
 
     border: 1px solid #e4ebf4;
 
@@ -573,9 +777,9 @@
 
 
 .topic-icon {
-    font-size: 34px;
-
     margin-bottom: 15px;
+
+    font-size: 34px;
 }
 
 
@@ -594,14 +798,18 @@
     color: #607286;
 
     font-size: 14px;
+
+    line-height: 1.7;
 }
 
 
-/* =========================================
+/* =========================================================
    SOBRE NA HOME
-========================================= */
+   ========================================================= */
 
 .about-home {
+    width: calc(100% - 40px);
+
     max-width: 1150px;
 
     margin: 70px auto;
@@ -610,39 +818,51 @@
 
     display: grid;
 
-    grid-template-columns: 1fr 180px;
+    grid-template-columns:
+        minmax(0, 1fr)
+        180px;
 
     align-items: center;
 
     gap: 30px;
 
-    background: linear-gradient(
-        135deg,
-        #0f3b82,
-        #1976d2
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #0f3b82,
+            #1976d2
+        );
 
     border-radius: 20px;
 
-    color: white;
+    color: #ffffff;
+
+    box-shadow:
+        0 15px 40px rgba(15, 59, 130, 0.12);
 }
 
 
 .about-home h2 {
     margin: 0 0 15px;
 
-    color: white;
+    color: #ffffff;
 
     font-size: 30px;
+
+    line-height: 1.2;
 }
 
 
 .about-home p {
     max-width: 700px;
 
+    margin: 0;
+
     color: #f1f6ff;
 
     font-size: 16px;
+
+    line-height: 1.75;
 }
 
 
@@ -654,15 +874,20 @@
 .text-button {
     display: inline-block;
 
-    margin-top: 10px;
+    margin-top: 15px;
 
-    color: white;
+    color: #ffffff;
 
     text-decoration: none;
 
-    font-weight: 700;
-
     font-size: 14px;
+
+    font-weight: 800;
+}
+
+
+.text-button:hover {
+    text-decoration: underline;
 }
 
 
@@ -677,18 +902,18 @@
 }
 
 
-/* =========================================
-   RODAPÉ DA HOME
-========================================= */
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
 
 .site-footer {
     margin-top: 0;
 
     padding: 35px 20px;
 
-    border-top: 1px solid #e1e8f0;
+    background: #ffffff;
 
-    background: white;
+    border-top: 1px solid #e1e8f0;
 
     text-align: center;
 
@@ -707,177 +932,87 @@
 }
 
 
-/* =========================================
-   RESPONSIVIDADE DA HOME
-========================================= */
-
-@media (max-width: 850px) {
-
-    .hero-inner {
-        grid-template-columns: 1fr;
-
-        text-align: center;
-    }
-
-    .hero-text {
-        margin: auto;
-    }
-
-    .hero-text p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .hero-visual {
-        min-height: 280px;
-    }
-
-    .modern-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .topics-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-home {
-        margin-left: 20px;
-        margin-right: 20px;
-
-        grid-template-columns: 1fr;
-
-        text-align: center;
-    }
-
-    .about-home p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .about-symbol {
-        display: none;
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .topbar-container {
-        padding: 13px 16px;
-    }
-
-    .logo {
-        font-size: 16px;
-    }
-
-    .nav {
-        gap: 2px;
-    }
-
-    .nav a {
-        padding: 8px 9px;
-
-        font-size: 13px;
-    }
-
-    .home-hero {
-        min-height: auto;
-    }
-
-    .hero-inner {
-        padding: 60px 20px;
-    }
-
-    .hero-text h1 {
-        font-size: 40px;
-
-        letter-spacing: -1px;
-    }
-
-    .hero-text p {
-        font-size: 16px;
-    }
-
-    .science-icon {
-        width: 150px;
-
-        height: 150px;
-
-        font-size: 70px;
-    }
-
-    .floating-card {
-        font-size: 11px;
-
-        padding: 8px 11px;
-    }
-
-    .home-section,
-    .topics-section {
-        padding: 55px 18px;
-    }
-
-    .section-header h2 {
-        font-size: 27px;
-    }
-
-    .modern-card-image {
-        height: 210px;
-    }
-
-    .about-home {
-        padding: 30px 22px;
-
-        margin-top: 30px;
-    }
-
-}
-/* =========================================
+/* =========================================================
    PÁGINA SOBRE
-========================================= */
+   ========================================================= */
 
 .about-page {
+    width: 100%;
+
     max-width: 1150px;
+
+    margin: 0 auto;
 }
+
 
 .about-content {
     padding-top: 40px;
+
     padding-bottom: 40px;
 }
+
 
 .about-content .section-header {
     max-width: 750px;
 }
-/* =========================================
-   PÁGINAS DE POSTAGEM — NOVO DESIGN
-========================================= */
+
+
+/* =========================================================
+   PÁGINAS DE POSTAGEM
+   ========================================================= */
+
+.post-page {
+    width: 100%;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 45px 20px 70px;
+}
+
+
+/* HERO DOS POSTS */
 
 .post-hero {
-    background: linear-gradient(
-        135deg,
-        #0f3b82,
-        #1976d2
-    );
+    position: relative;
 
-    color: white;
+    overflow: hidden;
 
-    padding: 65px 25px;
+    padding: 60px 40px;
+
+    margin-bottom: 30px;
+
+    border-radius: 24px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f3b82,
+            #1976d2
+        );
+
+    box-shadow:
+        0 15px 40px rgba(15, 59, 130, 0.15);
 }
 
 
 .post-hero-inner {
+    position: relative;
+
+    z-index: 1;
+
     max-width: 1150px;
 
-    margin: auto;
+    margin: 0 auto;
 
     display: grid;
 
-    grid-template-columns: 1fr 220px;
+    grid-template-columns:
+        minmax(0, 1fr)
+        220px;
 
     align-items: center;
 
@@ -886,18 +1021,28 @@
 
 
 .post-hero h1 {
-    margin: 0 0 15px;
+    position: relative;
 
-    color: white;
+    z-index: 2;
 
-    font-size: clamp(40px, 5vw, 58px);
+    max-width: 800px;
+
+    margin: 0 0 16px;
+
+    color: #ffffff;
+
+    font-size: clamp(36px, 5vw, 58px);
 
     line-height: 1.1;
 }
 
 
 .post-hero p {
-    max-width: 700px;
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 760px;
 
     margin: 0;
 
@@ -922,9 +1067,9 @@
 
     margin: auto;
 
-    background: rgba(255,255,255,0.12);
+    background: rgba(255, 255, 255, 0.12);
 
-    border: 1px solid rgba(255,255,255,0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 
     border-radius: 50%;
 
@@ -932,14 +1077,73 @@
 }
 
 
-/* =========================================
+/* TAG DO POST */
+
+.post-tag {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    margin-bottom: 18px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    color: #bfdbfe;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   POST CYBERBULLYING
+   ========================================================= */
+
+.post-cyberbullying {
+    background:
+        linear-gradient(
+            135deg,
+            #071426,
+            #172554,
+            #2563eb
+        );
+}
+
+
+.post-cyberbullying::after {
+    content: "🌐";
+
+    position: absolute;
+
+    right: 45px;
+
+    bottom: -25px;
+
+    font-size: 9rem;
+
+    opacity: 0.08;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
    CONTAINER DA MATÉRIA
-========================================= */
+   ========================================================= */
 
 .article-container {
+    width: 100%;
+
     max-width: 1050px;
 
-    margin: auto;
+    margin: 0 auto;
 
     padding: 40px 25px 80px;
 }
@@ -948,13 +1152,414 @@
 .article {
     max-width: 900px;
 
-    margin: auto;
+    margin: 0 auto;
 }
 
 
-/* =========================================
-   INTRODUÇÃO
-========================================= */
+/* =========================================================
+   CONTEÚDO MODERNO DO CYBERBULLYING
+   ========================================================= */
+
+.post-content {
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 8px 30px rgba(15, 23, 42, 0.07);
+}
+
+
+.post-content section {
+    margin-bottom: 45px;
+}
+
+
+.post-content section:last-child {
+    margin-bottom: 0;
+}
+
+
+.post-content h2 {
+    margin: 0 0 18px;
+
+    color: #172554;
+
+    font-size: 1.8rem;
+
+    line-height: 1.3;
+}
+
+
+.post-content p {
+    margin-bottom: 16px;
+
+    color: #475569;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+.post-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   DESTAQUE
+   ========================================================= */
+
+.post-highlight {
+    margin: 25px 0;
+
+    padding: 20px 22px;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+
+    color: #1e3a8a;
+
+    line-height: 1.7;
+}
+
+
+.post-highlight strong {
+    display: block;
+}
+
+
+.post-highlight strong + strong {
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   CARDS INFORMATIVOS
+   ========================================================= */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin: 25px 0;
+}
+
+
+.info-card {
+    padding: 22px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    background: #f8fafc;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.info-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+
+.info-card > span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 2rem;
+}
+
+
+.info-card strong {
+    color: #172554;
+}
+
+
+.info-card p {
+    margin: 5px 0 0;
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   CITAÇÃO
+   ========================================================= */
+
+.post-quote {
+    margin: 28px 0;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    background: #f1f5f9;
+
+    text-align: center;
+
+    color: #172554;
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   AÇÕES
+   ========================================================= */
+
+.action-list {
+    list-style: none;
+
+    margin: 25px 0;
+
+    padding: 0;
+}
+
+
+.action-list li {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    margin-bottom: 14px;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+}
+
+
+.action-list li > span {
+    min-width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+.action-list strong {
+    color: #172554;
+}
+
+
+.action-list p {
+    margin: 5px 0 0;
+}
+
+
+/* =========================================================
+   REGRAS
+   ========================================================= */
+
+.rules-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.rule-card {
+    min-height: 145px;
+
+    padding: 20px 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    border-radius: 16px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    text-align: center;
+}
+
+
+.rule-card span {
+    font-size: 2rem;
+}
+
+
+.rule-card strong {
+    color: #172554;
+
+    font-size: 0.9rem;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   VÍDEO — POST CYBERBULLYING
+   ========================================================= */
+
+.video-section {
+    margin-top: 45px;
+}
+
+
+.post-video {
+    margin-top: 25px;
+
+    padding: 18px;
+
+    border-radius: 20px;
+
+    background: #071426;
+}
+
+
+.post-video video {
+    display: block;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    height: auto;
+
+    margin: 0 auto;
+
+    border-radius: 12px;
+}
+
+
+/* =========================================================
+   MENSAGEM FINAL
+   ========================================================= */
+
+.final-message {
+    margin-top: 45px;
+
+    padding: 40px 30px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #dbeafe
+        );
+
+    text-align: center;
+}
+
+
+.final-message > span {
+    font-size: 3rem;
+}
+
+
+.final-message h2 {
+    margin-top: 12px;
+
+    color: #172554;
+}
+
+
+.final-message h3 {
+    color: #2563eb;
+
+    font-size: 1.5rem;
+}
+
+
+/* =========================================================
+   REFERÊNCIAS
+   ========================================================= */
+
+.references {
+    margin-top: 40px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+
+.references ul {
+    padding-left: 20px;
+}
+
+
+.references li {
+    margin-bottom: 14px;
+
+    color: #475569;
+
+    line-height: 1.6;
+}
+
+
+.references a {
+    color: #2563eb;
+
+    text-decoration: none;
+}
+
+
+.references a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   ESTRUTURA ANTIGA DAS POSTAGENS
+   Mantida para compatibilidade
+   ========================================================= */
 
 .article-intro {
     padding: 28px 30px;
@@ -979,10 +1584,6 @@
     line-height: 1.8;
 }
 
-
-/* =========================================
-   SEÇÕES
-========================================= */
 
 .article-section {
     display: grid;
@@ -1016,8 +1617,6 @@
 
     color: #1769aa;
 
-    font-family: "Poppins", sans-serif;
-
     font-size: 13px;
 
     font-weight: 700;
@@ -1037,12 +1636,14 @@
     color: #34495e;
 
     font-size: 17px;
+
+    line-height: 1.8;
 }
 
 
-/* =========================================
-   VÍDEO
-========================================= */
+/* =========================================================
+   VÍDEO DAS POSTAGENS ANTIGAS
+   ========================================================= */
 
 .article-media {
     margin: 45px 0;
@@ -1110,13 +1711,13 @@
     border-radius: 12px;
 
     box-shadow:
-        0 8px 25px rgba(0,0,0,0.15);
+        0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 
-/* =========================================
+/* =========================================================
    CONSEQUÊNCIAS
-========================================= */
+   ========================================================= */
 
 .consequences ul {
     list-style: none;
@@ -1155,9 +1756,9 @@
 }
 
 
-/* =========================================
+/* =========================================================
    BOXES DE DESTAQUE
-========================================= */
+   ========================================================= */
 
 .highlight-box {
     display: flex;
@@ -1219,14 +1820,109 @@
 }
 
 
-/* =========================================
-   RESPONSIVIDADE
-========================================= */
+/* =========================================================
+   RESPONSIVIDADE — TABLET
+   ========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
 
-    .post-hero {
-        padding: 50px 20px;
+    .modern-cards {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .topics-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .hero-inner {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(260px, 0.8fr);
+
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(40px, 5vw, 54px);
+    }
+
+    .info-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .rules-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLET PEQUENO
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .topbar-container {
+        gap: 15px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding: 65px 25px;
+    }
+
+    .hero-text {
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 300px;
+
+        max-width: 500px;
+
+        width: 100%;
+
+        margin: 0 auto;
+    }
+
+    .about-home {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .about-home p {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .about-symbol {
+        display: none;
     }
 
     .post-hero-inner {
@@ -1237,404 +1933,329 @@
 
     .post-hero p {
         margin-left: auto;
-        margin-right: auto;
 
-        font-size: 16px;
+        margin-right: auto;
     }
 
     .post-hero-icon {
-        width: 140px;
+        width: 150px;
 
-        height: 140px;
+        height: 150px;
 
-        font-size: 65px;
+        font-size: 68px;
     }
 
-    .article-container {
-        padding: 30px 18px 60px;
-    }
+}
 
-    .article-intro {
-        padding: 22px;
-    }
 
-    .article-section {
-        grid-template-columns: 1fr;
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .topbar-container {
+        min-height: auto;
+
+        padding: 12px 16px;
+
+        flex-direction: column;
 
         gap: 10px;
     }
 
-    .section-number {
-        width: 40px;
-
-        height: 40px;
+    .logo {
+        font-size: 16px;
     }
 
-    .section-body h2 {
+    .logo-icon {
+        width: 34px;
+
+        height: 34px;
+
+        font-size: 20px;
+    }
+
+    .nav {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 2px;
+    }
+
+    .nav a {
+        padding: 7px 9px;
+
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    .home-hero {
+        min-height: auto;
+    }
+
+    .hero-inner {
+        padding: 55px 20px 60px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+
+        letter-spacing: -1.2px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        max-width: 330px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .hero-button {
+        width: 100%;
+    }
+
+
+    /* VISUAL */
+
+    .hero-visual {
+        min-height: 260px;
+    }
+
+    .science-icon {
+        width: 150px;
+
+        height: 150px;
+
+        font-size: 68px;
+    }
+
+    .floating-card {
+        padding: 8px 11px;
+
+        font-size: 11px;
+    }
+
+    .card-one {
+        top: 20px;
+
+        right: 0;
+    }
+
+    .card-two {
+        bottom: 45px;
+
+        left: 0;
+    }
+
+    .card-three {
+        right: 5px;
+
+        bottom: 5px;
+    }
+
+
+    /* SEÇÕES */
+
+    .home-section,
+    .topics-section {
+        padding: 55px 18px;
+    }
+
+    .section-header {
+        margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+        font-size: 27px;
+    }
+
+    .section-header p {
+        font-size: 15px;
+    }
+
+
+    /* CARDS */
+
+    .modern-cards {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .modern-card-image {
+        height: 210px;
+    }
+
+    .modern-card-content {
+        padding: 22px;
+    }
+
+    .modern-card-content h3 {
+        font-size: 21px;
+    }
+
+
+    /* TÓPICOS */
+
+    .topics-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .topic {
+        padding: 23px;
+    }
+
+
+    /* SOBRE */
+
+    .about-home {
+        width: calc(100% - 36px);
+
+        margin: 35px auto;
+
+        padding: 30px 22px;
+    }
+
+    .about-home h2 {
+        font-size: 27px;
+    }
+
+
+    /* POSTS */
+
+    .post-page {
+        padding: 25px 12px 45px;
+    }
+
+    .post-hero {
+        padding: 35px 22px;
+
+        border-radius: 18px;
+    }
+
+    .post-hero h1 {
+        font-size: 34px;
+    }
+
+    .post-hero p {
+        font-size: 16px;
+    }
+
+    .post-cyberbullying::after {
+        display: none;
+    }
+
+    .post-content {
+        padding: 25px 18px;
+
+        border-radius: 18px;
+    }
+
+    .post-content h2 {
         font-size: 24px;
     }
 
-    .section-body p {
-        font-size: 16px;
+
+    /* CARDS DO POST */
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rules-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* AÇÕES */
+
+    .action-list li {
+        gap: 11px;
+
+        padding: 14px;
+    }
+
+
+    /* VÍDEO */
+
+    .post-video {
+        padding: 10px;
     }
 
     .article-media {
         padding: 22px;
     }
 
+    .video-wrapper video {
+        width: 100%;
+    }
+
+
+    /* BOXES */
+
     .highlight-box {
         padding: 22px;
 
         gap: 14px;
+
+        flex-direction: column;
+    }
+
+    .final-message {
+        padding: 30px 20px;
     }
 
 }
+
+
 /* =========================================================
-POSTAGEM - CYBERBULLYING
-========================================================= */
+   CELULAR MUITO PEQUENO
+   ========================================================= */
 
-.post-page {
-max-width: 1000px;
-margin: 0 auto;
-padding: 45px 20px 70px;
-}
+@media (max-width: 420px) {
 
-.post-hero {
-padding: 48px 40px;
-border-radius: 24px;
-margin-bottom: 30px;
-color: #ffffff;
-background: linear-gradient(135deg, #071426, #172554, #2563eb);
-box-shadow: 0 15px 40px rgba(15, 23, 42, 0.15);
-}
+    .nav a {
+        padding: 6px 7px;
 
-.post-cyberbullying {
-position: relative;
-overflow: hidden;
-}
+        font-size: 11px;
+    }
 
-.post-cyberbullying::after {
-content: "🌐";
-position: absolute;
-right: 45px;
-bottom: -25px;
-font-size: 9rem;
-opacity: 0.08;
-}
+    .hero-text h1 {
+        font-size: 34px;
+    }
 
-.post-tag {
-display: inline-block;
-padding: 7px 14px;
-border-radius: 30px;
-background: rgba(255,255,255,0.12);
-border: 1px solid rgba(255,255,255,0.25);
-color: #bfdbfe;
-font-size: 0.8rem;
-font-weight: 700;
-letter-spacing: 0.5px;
-margin-bottom: 18px;
-}
+    .science-icon {
+        width: 135px;
 
-.post-hero h1 {
-position: relative;
-z-index: 1;
-max-width: 800px;
-margin: 0 0 18px;
-font-size: clamp(2rem, 5vw, 3.4rem);
-line-height: 1.1;
-}
+        height: 135px;
 
-.post-hero p {
-position: relative;
-z-index: 1;
-max-width: 760px;
-margin: 0;
-color: #dbeafe;
-font-size: 1.1rem;
-line-height: 1.7;
-}
+        font-size: 60px;
+    }
 
-.post-content {
-background: #ffffff;
-border-radius: 22px;
-padding: 40px;
-box-shadow: 0 8px 30px rgba(15, 23, 42, 0.07);
-}
+    .floating-card {
+        font-size: 10px;
+    }
 
-.post-content section {
-margin-bottom: 45px;
-}
-
-.post-content section:last-child {
-margin-bottom: 0;
-}
-
-.post-content h2 {
-margin: 0 0 18px;
-color: #172554;
-font-size: 1.8rem;
-}
-
-.post-content p {
-color: #475569;
-line-height: 1.8;
-}
-
-.post-highlight {
-margin: 25px 0;
-padding: 20px 22px;
-border-left: 5px solid #2563eb;
-border-radius: 12px;
-background: #eff6ff;
-color: #1e3a8a;
-line-height: 1.7;
-}
-
-.post-highlight strong {
-display: block;
-}
-
-.post-highlight strong + strong {
-margin-top: 8px;
-}
-
-/* CARDS */
-
-.info-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 16px;
-margin: 25px 0;
-}
-
-.info-card {
-padding: 22px;
-border: 1px solid #e2e8f0;
-border-radius: 16px;
-background: #f8fafc;
-transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.info-card:hover {
-transform: translateY(-3px);
-box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-}
-
-.info-card > span {
-display: block;
-font-size: 2rem;
-margin-bottom: 12px;
-}
-
-.info-card strong {
-color: #172554;
-}
-
-.info-card p {
-margin-bottom: 0;
-font-size: 0.95rem;
-}
-
-/* CITAÇÃO */
-
-.post-quote {
-margin: 28px 0;
-padding: 25px;
-border-radius: 16px;
-background: #f1f5f9;
-text-align: center;
-color: #172554;
-font-size: 1.2rem;
-font-weight: 700;
-}
-
-/* AÇÕES */
-
-.action-list {
-list-style: none;
-margin: 25px 0;
-padding: 0;
-}
-
-.action-list li {
-display: flex;
-align-items: flex-start;
-gap: 16px;
-margin-bottom: 14px;
-padding: 16px;
-border-radius: 14px;
-background: #f8fafc;
-border: 1px solid #e2e8f0;
-}
-
-.action-list li > span {
-min-width: 34px;
-height: 34px;
-display: flex;
-align-items: center;
-justify-content: center;
-border-radius: 50%;
-background: #2563eb;
-color: #ffffff;
-font-weight: 700;
-}
-
-.action-list strong {
-color: #172554;
-}
-
-.action-list p {
-margin: 5px 0 0;
-}
-
-/* REGRAS */
-
-.rules-grid {
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-gap: 12px;
-margin-top: 25px;
-}
-
-.rule-card {
-min-height: 145px;
-padding: 20px 14px;
-border-radius: 16px;
-background: #f8fafc;
-border: 1px solid #e2e8f0;
-text-align: center;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-gap: 12px;
-}
-
-.rule-card span {
-font-size: 2rem;
-}
-
-.rule-card strong {
-color: #172554;
-font-size: 0.9rem;
-line-height: 1.4;
-}
-
-/* VÍDEO */
-
-.video-section {
-margin-top: 45px;
-}
-
-.post-video {
-margin-top: 25px;
-padding: 18px;
-border-radius: 20px;
-background: #071426;
-}
-
-.post-video video {
-display: block;
-width: 100%;
-max-width: 500px;
-height: auto;
-margin: 0 auto;
-border-radius: 12px;
-}
-
-/* MENSAGEM FINAL */
-
-.final-message {
-margin-top: 45px;
-padding: 40px 30px;
-border-radius: 22px;
-background: linear-gradient(135deg, #eff6ff, #dbeafe);
-text-align: center;
-}
-
-.final-message > span {
-font-size: 3rem;
-}
-
-.final-message h2 {
-margin-top: 12px;
-}
-
-.final-message h3 {
-color: #2563eb;
-font-size: 1.5rem;
-}
-
-/* REFERÊNCIAS */
-
-.references {
-margin-top: 40px;
-padding-top: 30px;
-border-top: 1px solid #e2e8f0;
-}
-
-.references ul {
-padding-left: 20px;
-}
-
-.references li {
-margin-bottom: 14px;
-color: #475569;
-line-height: 1.6;
-}
-
-.references a {
-color: #2563eb;
-}
-
-/* RESPONSIVO */
-
-@media (max-width: 800px) {
-
-.info-grid {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.rules-grid {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.post-content {
-    padding: 30px 24px;
-}
-
-}
-
-@media (max-width: 600px) {
-
-.post-page {
-    padding: 25px 12px 45px;
-}
-
-.post-hero {
-    padding: 32px 22px;
-    border-radius: 18px;
-}
-
-.post-cyberbullying::after {
-    display: none;
-}
-
-.post-content {
-    padding: 25px 18px;
-    border-radius: 18px;
-}
-
-.info-grid {
-    grid-template-columns: 1fr;
-}
-
-.rules-grid {
-    grid-template-columns: 1fr 1fr;
-}
-
-.post-video {
-    padding: 10px;
-}
+    .rules-grid {
+        grid-template-columns: 1fr;
+    }
 
 }
