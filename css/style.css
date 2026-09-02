@@ -1289,3 +1289,352 @@
     }
 
 }
+/* =========================================================
+POSTAGEM - CYBERBULLYING
+========================================================= */
+
+.post-page {
+max-width: 1000px;
+margin: 0 auto;
+padding: 45px 20px 70px;
+}
+
+.post-hero {
+padding: 48px 40px;
+border-radius: 24px;
+margin-bottom: 30px;
+color: #ffffff;
+background: linear-gradient(135deg, #071426, #172554, #2563eb);
+box-shadow: 0 15px 40px rgba(15, 23, 42, 0.15);
+}
+
+.post-cyberbullying {
+position: relative;
+overflow: hidden;
+}
+
+.post-cyberbullying::after {
+content: "🌐";
+position: absolute;
+right: 45px;
+bottom: -25px;
+font-size: 9rem;
+opacity: 0.08;
+}
+
+.post-tag {
+display: inline-block;
+padding: 7px 14px;
+border-radius: 30px;
+background: rgba(255,255,255,0.12);
+border: 1px solid rgba(255,255,255,0.25);
+color: #bfdbfe;
+font-size: 0.8rem;
+font-weight: 700;
+letter-spacing: 0.5px;
+margin-bottom: 18px;
+}
+
+.post-hero h1 {
+position: relative;
+z-index: 1;
+max-width: 800px;
+margin: 0 0 18px;
+font-size: clamp(2rem, 5vw, 3.4rem);
+line-height: 1.1;
+}
+
+.post-hero p {
+position: relative;
+z-index: 1;
+max-width: 760px;
+margin: 0;
+color: #dbeafe;
+font-size: 1.1rem;
+line-height: 1.7;
+}
+
+.post-content {
+background: #ffffff;
+border-radius: 22px;
+padding: 40px;
+box-shadow: 0 8px 30px rgba(15, 23, 42, 0.07);
+}
+
+.post-content section {
+margin-bottom: 45px;
+}
+
+.post-content section:last-child {
+margin-bottom: 0;
+}
+
+.post-content h2 {
+margin: 0 0 18px;
+color: #172554;
+font-size: 1.8rem;
+}
+
+.post-content p {
+color: #475569;
+line-height: 1.8;
+}
+
+.post-highlight {
+margin: 25px 0;
+padding: 20px 22px;
+border-left: 5px solid #2563eb;
+border-radius: 12px;
+background: #eff6ff;
+color: #1e3a8a;
+line-height: 1.7;
+}
+
+.post-highlight strong {
+display: block;
+}
+
+.post-highlight strong + strong {
+margin-top: 8px;
+}
+
+/* CARDS */
+
+.info-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 16px;
+margin: 25px 0;
+}
+
+.info-card {
+padding: 22px;
+border: 1px solid #e2e8f0;
+border-radius: 16px;
+background: #f8fafc;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.info-card > span {
+display: block;
+font-size: 2rem;
+margin-bottom: 12px;
+}
+
+.info-card strong {
+color: #172554;
+}
+
+.info-card p {
+margin-bottom: 0;
+font-size: 0.95rem;
+}
+
+/* CITAÇÃO */
+
+.post-quote {
+margin: 28px 0;
+padding: 25px;
+border-radius: 16px;
+background: #f1f5f9;
+text-align: center;
+color: #172554;
+font-size: 1.2rem;
+font-weight: 700;
+}
+
+/* AÇÕES */
+
+.action-list {
+list-style: none;
+margin: 25px 0;
+padding: 0;
+}
+
+.action-list li {
+display: flex;
+align-items: flex-start;
+gap: 16px;
+margin-bottom: 14px;
+padding: 16px;
+border-radius: 14px;
+background: #f8fafc;
+border: 1px solid #e2e8f0;
+}
+
+.action-list li > span {
+min-width: 34px;
+height: 34px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+background: #2563eb;
+color: #ffffff;
+font-weight: 700;
+}
+
+.action-list strong {
+color: #172554;
+}
+
+.action-list p {
+margin: 5px 0 0;
+}
+
+/* REGRAS */
+
+.rules-grid {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 12px;
+margin-top: 25px;
+}
+
+.rule-card {
+min-height: 145px;
+padding: 20px 14px;
+border-radius: 16px;
+background: #f8fafc;
+border: 1px solid #e2e8f0;
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 12px;
+}
+
+.rule-card span {
+font-size: 2rem;
+}
+
+.rule-card strong {
+color: #172554;
+font-size: 0.9rem;
+line-height: 1.4;
+}
+
+/* VÍDEO */
+
+.video-section {
+margin-top: 45px;
+}
+
+.post-video {
+margin-top: 25px;
+padding: 18px;
+border-radius: 20px;
+background: #071426;
+}
+
+.post-video video {
+display: block;
+width: 100%;
+max-width: 500px;
+height: auto;
+margin: 0 auto;
+border-radius: 12px;
+}
+
+/* MENSAGEM FINAL */
+
+.final-message {
+margin-top: 45px;
+padding: 40px 30px;
+border-radius: 22px;
+background: linear-gradient(135deg, #eff6ff, #dbeafe);
+text-align: center;
+}
+
+.final-message > span {
+font-size: 3rem;
+}
+
+.final-message h2 {
+margin-top: 12px;
+}
+
+.final-message h3 {
+color: #2563eb;
+font-size: 1.5rem;
+}
+
+/* REFERÊNCIAS */
+
+.references {
+margin-top: 40px;
+padding-top: 30px;
+border-top: 1px solid #e2e8f0;
+}
+
+.references ul {
+padding-left: 20px;
+}
+
+.references li {
+margin-bottom: 14px;
+color: #475569;
+line-height: 1.6;
+}
+
+.references a {
+color: #2563eb;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+.info-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.rules-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.post-content {
+    padding: 30px 24px;
+}
+
+}
+
+@media (max-width: 600px) {
+
+.post-page {
+    padding: 25px 12px 45px;
+}
+
+.post-hero {
+    padding: 32px 22px;
+    border-radius: 18px;
+}
+
+.post-cyberbullying::after {
+    display: none;
+}
+
+.post-content {
+    padding: 25px 18px;
+    border-radius: 18px;
+}
+
+.info-grid {
+    grid-template-columns: 1fr;
+}
+
+.rules-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.post-video {
+    padding: 10px;
+}
+
+}
