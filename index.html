@@ -11,7 +11,7 @@
 
 <meta
     name="description"
-    content="Ciência com Matheus — conteúdos, estudos, experimentos e curiosidades de Ciências."
+    content="Ciência com Matheus — estudos, atividades, experimentos e curiosidades de Ciências."
 >
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,83 +30,118 @@
 
 <body>
 
-<div class="layout">
-
 
 <!-- =========================================
-     MENU LATERAL
+     BARRA DE NAVEGAÇÃO
 ========================================= -->
 
-<aside class="sidebar">
+<header class="topbar">
 
-<h2>
-🔬 Ciência<br>
-com Matheus
-</h2>
+<div class="topbar-container">
 
-<ul>
+<a href="index.html" class="logo">
 
-<li>
+<span class="logo-icon">🔬</span>
+
+<span>
+Ciência com Matheus
+</span>
+
+</a>
+
+
+<nav class="nav">
+
 <a href="index.html" class="active">
-🏠 Início
+Início
 </a>
-</li>
 
-<li>
 <a href="sobre.html">
-ℹ️ Sobre
+Sobre
 </a>
-</li>
 
-<li>
-<b>Postagens</b>
-</li>
-
-<li>
-<a href="posts/efeito-estufa.html">
-🌍 Efeito Estufa
+<a href="#conteudos">
+Conteúdos
 </a>
-</li>
 
-<li>
-<a href="posts/vacinacao.html">
-💉 Importância da Vacinação
-</a>
-</li>
+</nav>
 
-</ul>
+</div>
 
-</aside>
+</header>
 
 
 
 <!-- =========================================
-     CONTEÚDO PRINCIPAL
+     HERO
 ========================================= -->
 
-<main class="content">
+<main>
 
 
-<!-- =========================================
-     APRESENTAÇÃO
-========================================= -->
+<section class="home-hero">
 
-<section class="intro">
+<div class="hero-inner">
+
+<div class="hero-text">
+
+<span class="hero-tag">
+🔬 BLOG DE CIÊNCIAS
+</span>
 
 <h1>
-👋 Bem-vindo ao Ciência com Matheus
+Descobrindo o mundo
+<span>através da ciência.</span>
 </h1>
 
 <p>
-Olá! Meu nome é <strong>Matheus Henrique</strong>,
-tenho 12 anos e sou aluno da 7ª série da Escola Prisma.
+Um espaço para compartilhar estudos, atividades,
+experimentos, curiosidades e descobertas das aulas
+de Ciências.
 </p>
 
-<p>
-Este blog foi criado para compartilhar meus estudos de
-<strong>Ciências</strong>, incluindo atividades,
-experimentos, curiosidades e vídeos educativos.
-</p>
+<div class="hero-buttons">
+
+<a
+    href="#conteudos"
+    class="hero-button"
+>
+Explorar conteúdos →
+</a>
+
+<a
+    href="sobre.html"
+    class="hero-button secondary"
+>
+Conheça o projeto
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-visual">
+
+<div class="science-icon">
+🔬
+</div>
+
+<div class="floating-card card-one">
+🌍 Meio ambiente
+</div>
+
+<div class="floating-card card-two">
+💉 Saúde
+</div>
+
+<div class="floating-card card-three">
+💡 Curiosidades
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -116,46 +151,67 @@ experimentos, curiosidades e vídeos educativos.
      CONTEÚDOS
 ========================================= -->
 
-<section>
+<section
+    id="conteudos"
+    class="home-section"
+>
+
+<div class="section-header">
+
+<span class="section-tag">
+📚 CONTEÚDOS
+</span>
 
 <h2>
-📚 Conteúdos de Ciências
+Conteúdos em destaque
 </h2>
 
 <p>
-Confira algumas das atividades e temas que estou estudando.
+Confira algumas das atividades e temas
+que estou estudando.
 </p>
 
+</div>
 
-<div class="cards">
+
+<div class="modern-cards">
 
 
 <!-- =========================================
-     CARD — EFEITO ESTUFA
+     EFEITO ESTUFA
 ========================================= -->
 
 <a
     href="posts/efeito-estufa.html"
-    class="card"
+    class="modern-card"
 >
+
+<div class="modern-card-image">
 
 <img
     src="https://matheusfaria-blog-objects.s3.us-east-1.amazonaws.com/efeito-estufa-card.JPG"
-    alt="Imagem representando o efeito estufa"
+    alt="Efeito Estufa"
 >
 
-<div class="card-content">
+<span class="modern-card-category">
+🌍 Meio ambiente
+</span>
+
+</div>
+
+
+<div class="modern-card-content">
 
 <h3>
-🌍 Efeito Estufa
+Efeito Estufa
 </h3>
 
 <p>
 Entenda o que é o efeito estufa, como ele funciona
-e quais podem ser suas consequências para o planeta.
+e quais são suas consequências para o planeta.
 </p>
 
-<span class="card-link">
+<span class="modern-card-link">
 Ler conteúdo →
 </span>
 
@@ -166,23 +222,32 @@ Ler conteúdo →
 
 
 <!-- =========================================
-     CARD — VACINAÇÃO
+     VACINAÇÃO
 ========================================= -->
 
 <a
     href="posts/vacinacao.html"
-    class="card"
+    class="modern-card"
 >
+
+<div class="modern-card-image">
 
 <img
     src="https://matheusfaria-blog-objects.s3.us-east-1.amazonaws.com/vacinacao-card.JPG"
-    alt="Imagem representando a importância da vacinação"
+    alt="Importância da Vacinação"
 >
 
-<div class="card-content">
+<span class="modern-card-category">
+💉 Saúde
+</span>
+
+</div>
+
+
+<div class="modern-card-content">
 
 <h3>
-💉 Importância da Vacinação
+Importância da Vacinação
 </h3>
 
 <p>
@@ -190,7 +255,7 @@ Entenda como as vacinas ajudam a proteger
 as pessoas e prevenir diversas doenças.
 </p>
 
-<span class="card-link">
+<span class="modern-card-link">
 Ler conteúdo →
 </span>
 
@@ -206,27 +271,149 @@ Ler conteúdo →
 
 
 <!-- =========================================
-     MENSAGEM FINAL
+     ÁREAS DO BLOG
 ========================================= -->
 
-<section class="intro home-final">
+<section class="topics-section">
+
+<div class="section-header">
+
+<span class="section-tag">
+🔎 EXPLORAR
+</span>
 
 <h2>
-🔎 Aprender é descobrir!
+O que você encontra aqui?
+</h2>
+
+</div>
+
+
+<div class="topics-grid">
+
+
+<div class="topic">
+
+<div class="topic-icon">
+🧪
+</div>
+
+<h3>
+Experimentos
+</h3>
+
+<p>
+Atividades práticas e experiências
+realizadas durante os estudos.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<div class="topic-icon">
+🌎
+</div>
+
+<h3>
+Meio ambiente
+</h3>
+
+<p>
+Temas relacionados ao planeta,
+natureza e sustentabilidade.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<div class="topic-icon">
+💡
+</div>
+
+<h3>
+Curiosidades
+</h3>
+
+<p>
+Descobertas e informações interessantes
+sobre o mundo da ciência.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     SOBRE O PROJETO
+========================================= -->
+
+<section class="about-home">
+
+<div>
+
+<span class="section-tag">
+👨‍🎓 SOBRE O PROJETO
+</span>
+
+<h2>
+Aprender também é descobrir.
 </h2>
 
 <p>
-A ciência está presente em nosso dia a dia.
-Aqui compartilho um pouco do que estou aprendendo
-nas aulas de Ciências.
+Meu nome é <strong>Matheus Henrique</strong>, tenho 12 anos
+e sou aluno da 7ª série da Escola Prisma.
 </p>
+
+<p>
+Este blog foi criado para registrar e compartilhar
+um pouco do que estou aprendendo nas aulas de Ciências.
+</p>
+
+<a
+    href="sobre.html"
+    class="text-button"
+>
+Conheça o projeto →
+</a>
+
+</div>
+
+<div class="about-symbol">
+🧬
+</div>
 
 </section>
 
 
 </main>
 
-</div>
+
+
+<!-- =========================================
+     RODAPÉ
+========================================= -->
+
+<footer class="site-footer">
+
+<p>
+© 2026 Ciência com Matheus
+</p>
+
+<p>
+Um espaço para aprender, explorar e descobrir.
+</p>
+
+</footer>
+
 
 </body>
 

@@ -1,383 +1,620 @@
 /* =========================================
-   CIÊNCIA COM MATHEUS
-   ESTILO PRINCIPAL DO SITE
+   HOME MODERNA
 ========================================= */
+
 
 /* =========================================
-   FONTES E CONFIGURAÇÕES
+   BARRA SUPERIOR
 ========================================= */
 
-* {
-    box-sizing: border-box;
-}
+.topbar {
+    position: sticky;
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-
-    font-family: "Inter", Arial, Helvetica, sans-serif;
-
-    background: #f4f7fb;
-
-    color: #26364a;
-
-    line-height: 1.7;
-
-    font-size: 16px;
-}
-
-/* =========================================
-   TÍTULOS
-========================================= */
-
-h1,
-h2,
-h3,
-h4 {
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-}
-
-h1 {
-    color: #123f85;
-
-    font-size: 38px;
-
-    line-height: 1.2;
-
-    letter-spacing: -0.8px;
-}
-
-h2 {
-    color: #1557a6;
-
-    font-size: 27px;
-
-    line-height: 1.3;
-}
-
-h3 {
-    color: #1769aa;
-
-    font-size: 21px;
-
-    line-height: 1.3;
-}
-
-p {
-    color: #34495e;
-
-    font-size: 16px;
-}
-
-/* =========================================
-   LAYOUT
-========================================= */
-
-.layout {
-    display: flex;
-
-    min-height: 100vh;
-}
-
-/* =========================================
-   SIDEBAR
-========================================= */
-
-.sidebar {
-    width: 260px;
-
-    min-height: 100vh;
-
-    position: fixed;
-
-    left: 0;
     top: 0;
 
-    padding: 28px 20px;
+    z-index: 2000;
 
-    background: linear-gradient(
-        180deg,
-        #0f3b82 0%,
-        #1557a6 55%,
-        #1976d2 100%
-    );
+    background: rgba(255, 255, 255, 0.95);
 
-    color: white;
+    backdrop-filter: blur(10px);
 
-    box-shadow:
-        4px 0 18px rgba(15, 59, 130, 0.12);
-
-    z-index: 1000;
+    border-bottom: 1px solid #e6edf5;
 }
 
-/* =========================================
-   LOGO
-========================================= */
 
-.sidebar h2 {
-    margin: 0 0 35px 0;
+.topbar-container {
+    max-width: 1200px;
 
-    color: white;
+    margin: auto;
 
-    font-family: "Poppins", Arial, sans-serif;
+    padding: 16px 25px;
 
-    font-size: 23px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #123f85;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 18px;
 
     font-weight: 700;
-
-    letter-spacing: 0.3px;
 }
+
+
+.logo-icon {
+    font-size: 25px;
+}
+
+
+/* MENU */
+
+.nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.nav a {
+    padding: 9px 15px;
+
+    border-radius: 9px;
+
+    color: #425466;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+
+.nav a:hover {
+    background: #eef5ff;
+
+    color: #1557a6;
+}
+
+
+.nav a.active {
+    background: #eaf3ff;
+
+    color: #1557a6;
+}
+
 
 /* =========================================
-   MENU
+   HERO
 ========================================= */
 
-.sidebar ul {
-    list-style: none;
+.home-hero {
+    min-height: 560px;
 
-    padding: 0;
+    display: flex;
 
-    margin: 0;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(70, 150, 255, 0.18),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #eef6ff,
+            #ffffff 65%
+        );
 }
 
-.sidebar li {
-    margin: 7px 0;
+
+.hero-inner {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 70px 25px;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 50px;
+
+    align-items: center;
 }
 
-/* TÍTULO POSTAGENS */
 
-.sidebar li > b {
-    display: block;
+.hero-text {
+    max-width: 680px;
+}
 
-    margin: 25px 12px 8px;
 
-    color: #dbeafe;
+.hero-tag,
+.section-tag {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #1769aa;
 
     font-size: 12px;
 
     font-weight: 700;
 
     letter-spacing: 1px;
-
-    text-transform: uppercase;
 }
 
-/* LINKS */
 
-.sidebar a {
+.hero-text h1 {
+    margin: 0;
+
+    color: #123f85;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(40px, 5vw, 64px);
+
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+}
+
+
+.hero-text h1 span {
+    display: block;
+
+    color: #1976d2;
+}
+
+
+.hero-text p {
+    max-width: 620px;
+
+    margin: 25px 0;
+
+    color: #526579;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   BOTÕES DO HERO
+========================================= */
+
+.hero-buttons {
     display: flex;
 
-    align-items: center;
+    flex-wrap: wrap;
 
-    gap: 8px;
+    gap: 12px;
 
-    padding: 11px 13px;
+    margin-top: 28px;
+}
+
+
+.hero-button {
+    display: inline-block;
+
+    padding: 13px 21px;
 
     border-radius: 10px;
+
+    background: #1565c0;
 
     color: white;
 
     text-decoration: none;
 
-    font-size: 15px;
+    font-size: 14px;
 
-    font-weight: 500;
-
-    transition:
-        background 0.25s ease,
-        transform 0.2s ease,
-        box-shadow 0.25s ease;
-}
-
-.sidebar a:hover {
-    background: rgba(255, 255, 255, 0.14);
-
-    transform: translateX(4px);
-}
-
-.sidebar a.active {
-    background: rgba(255, 255, 255, 0.20);
+    font-weight: 700;
 
     box-shadow:
-        inset 3px 0 0 white;
+        0 6px 15px rgba(21, 101, 192, 0.20);
+
+    transition: 0.25s ease;
 }
 
-/* =========================================
-   CONTEÚDO PRINCIPAL
-========================================= */
 
-.content {
-    width: calc(100% - 260px);
+.hero-button:hover {
+    background: #0d47a1;
 
-    margin-left: 260px;
-
-    padding: 45px;
-
-    max-width: 1400px;
+    transform: translateY(-2px);
 }
 
+
+.hero-button.secondary {
+    background: white;
+
+    color: #1557a6;
+
+    border: 1px solid #d9e6f5;
+
+    box-shadow: none;
+}
+
+
+.hero-button.secondary:hover {
+    background: #f4f8fd;
+}
+
+
 /* =========================================
-   CARD PRINCIPAL
+   VISUAL DO HERO
 ========================================= */
 
-.card {
-    width: 100%;
+.hero-visual {
+    position: relative;
 
-    max-width: 1000px;
+    min-height: 350px;
 
-    margin: 0 auto 30px;
+    display: flex;
 
-    padding: 35px;
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.science-icon {
+    width: 190px;
+
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
 
     background: white;
 
-    border: 1px solid #e5eaf2;
-
-    border-radius: 18px;
+    font-size: 90px;
 
     box-shadow:
-        0 6px 25px rgba(15, 59, 130, 0.07);
+        0 20px 50px rgba(15, 59, 130, 0.12);
 }
 
+
+.floating-card {
+    position: absolute;
+
+    padding: 11px 17px;
+
+    background: white;
+
+    border: 1px solid #e2eaf3;
+
+    border-radius: 12px;
+
+    color: #34495e;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 25px rgba(15, 59, 130, 0.10);
+}
+
+
+.card-one {
+    top: 45px;
+
+    right: 15px;
+}
+
+
+.card-two {
+    bottom: 60px;
+
+    left: 10px;
+}
+
+
+.card-three {
+    bottom: 15px;
+
+    right: 45px;
+}
+
+
 /* =========================================
-   PÁGINA INICIAL
+   SEÇÕES
 ========================================= */
 
-.intro {
-    padding: 35px;
+.home-section,
+.topics-section {
+    max-width: 1200px;
 
+    margin: auto;
+
+    padding: 80px 25px;
+}
+
+
+.section-header {
     margin-bottom: 35px;
-
-    background: linear-gradient(
-        135deg,
-        #ffffff,
-        #f7faff
-    );
-
-    border: 1px solid #e3ebf5;
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 6px 25px rgba(15, 59, 130, 0.07);
 }
 
-.intro h1 {
-    margin-top: 0;
 
-    margin-bottom: 18px;
+.section-header h2 {
+    margin: 0 0 10px;
+
+    color: #123f85;
+
+    font-size: 32px;
 }
 
-.intro p {
-    font-size: 17px;
 
-    margin: 10px 0;
+.section-header p {
+    margin: 0;
+
+    color: #607286;
+
+    font-size: 16px;
 }
+
 
 /* =========================================
-   GRID DE CARDS
+   CARDS MODERNOS
 ========================================= */
 
-.cards {
+.modern-cards {
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(280px, 1fr));
+        repeat(2, minmax(0, 1fr));
 
-    gap: 25px;
+    gap: 28px;
 }
 
-/* =========================================
-   CARD DE POSTAGEM
-========================================= */
 
-.cards .card {
-    display: block;
-
-    padding: 0;
-
-    margin: 0;
-
+.modern-card {
     overflow: hidden;
 
     background: white;
 
-    border: 1px solid #e4eaf2;
+    border: 1px solid #e3eaf3;
 
-    border-radius: 16px;
+    border-radius: 18px;
 
     text-decoration: none;
 
-    color: inherit;
-
     box-shadow:
-        0 5px 20px rgba(15, 59, 130, 0.07);
+        0 7px 25px rgba(15, 59, 130, 0.07);
 
     transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.cards .card:hover {
-    transform: translateY(-6px);
+
+.modern-card:hover {
+    transform: translateY(-7px);
 
     box-shadow:
-        0 14px 30px rgba(15, 59, 130, 0.14);
+        0 18px 40px rgba(15, 59, 130, 0.13);
 }
 
-/* =========================================
-   IMAGEM DOS CARDS
-========================================= */
 
-.cards .card img {
-    display: block;
+/* IMAGEM */
 
+.modern-card-image {
+    position: relative;
+
+    height: 240px;
+
+    overflow: hidden;
+}
+
+
+.modern-card-image img {
     width: 100%;
 
-    height: 190px;
+    height: 100%;
 
     object-fit: cover;
+
+    transition: transform 0.4s ease;
 }
 
-/* =========================================
-   CONTEÚDO DO CARD
-========================================= */
 
-.card-content {
-    padding: 22px;
+.modern-card:hover img {
+    transform: scale(1.04);
 }
 
-.card-content h3 {
-    margin: 0 0 10px;
+
+/* CATEGORIA */
+
+.modern-card-category {
+    position: absolute;
+
+    left: 18px;
+
+    bottom: 18px;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.94);
 
     color: #1557a6;
 
-    font-size: 21px;
+    font-size: 12px;
+
+    font-weight: 700;
 }
 
-.card-content p {
+
+/* CONTEÚDO */
+
+.modern-card-content {
+    padding: 25px;
+}
+
+
+.modern-card-content h3 {
+    margin: 0 0 10px;
+
+    color: #123f85;
+
+    font-size: 23px;
+}
+
+
+.modern-card-content p {
     margin: 0;
 
     color: #526579;
 
     font-size: 15px;
 
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
+
+.modern-card-link {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    color: #1769aa;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
 /* =========================================
-   HERO DAS POSTAGENS
+   TÓPICOS
 ========================================= */
 
-.hero {
-    max-width: 1000px;
+.topics-section {
+    max-width: none;
 
-    margin: 0 auto 30px;
+    background: #f8fbff;
+}
 
-    padding: 40px;
+
+.topics-section .section-header,
+.topics-grid {
+    max-width: 1150px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+.topics-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.topic {
+    padding: 28px;
+
+    background: white;
+
+    border: 1px solid #e4ebf4;
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.topic:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(15, 59, 130, 0.08);
+}
+
+
+.topic-icon {
+    font-size: 34px;
+
+    margin-bottom: 15px;
+}
+
+
+.topic h3 {
+    margin: 0 0 8px;
+
+    color: #1557a6;
+
+    font-size: 20px;
+}
+
+
+.topic p {
+    margin: 0;
+
+    color: #607286;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SOBRE NA HOME
+========================================= */
+
+.about-home {
+    max-width: 1150px;
+
+    margin: 70px auto;
+
+    padding: 45px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 180px;
+
+    align-items: center;
+
+    gap: 30px;
 
     background: linear-gradient(
         135deg,
@@ -385,497 +622,218 @@ p {
         #1976d2
     );
 
-    color: white;
-
     border-radius: 20px;
 
-    box-shadow:
-        0 10px 30px rgba(15, 59, 130, 0.18);
+    color: white;
 }
 
-.hero-content {
-    max-width: 800px;
-}
 
-.hero-tag {
-    display: inline-block;
-
-    margin-bottom: 12px;
-
-    padding: 6px 13px;
-
-    border-radius: 20px;
-
-    background: rgba(255, 255, 255, 0.15);
+.about-home h2 {
+    margin: 0 0 15px;
 
     color: white;
 
-    font-size: 12px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
+    font-size: 30px;
 }
 
-.hero h1 {
-    margin: 0 0 12px;
 
-    color: white;
-
-    font-size: 40px;
-
-    line-height: 1.2;
-}
-
-.hero p {
-    margin: 0;
+.about-home p {
+    max-width: 700px;
 
     color: #f1f6ff;
-
-    font-size: 17px;
-
-    line-height: 1.7;
-}
-
-/* =========================================
-   POSTAGENS
-========================================= */
-
-.post-efeito,
-.post-vacinacao {
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    line-height: 1.7;
-}
-
-.post-efeito h1,
-.post-vacinacao h1 {
-    margin-top: 0;
-
-    margin-bottom: 30px;
-
-    text-align: center;
-}
-
-.post-efeito h2,
-.post-vacinacao h2 {
-    margin-top: 35px;
-
-    margin-bottom: 15px;
-
-    color: #1557a6;
-}
-
-.post-efeito p,
-.post-vacinacao p {
-    font-size: 17px;
-
-    color: #34495e;
-}
-
-/* =========================================
-   LISTAS
-========================================= */
-
-.post-efeito ul,
-.post-vacinacao ul {
-    padding-left: 25px;
-
-    color: #34495e;
-}
-
-.post-efeito li,
-.post-vacinacao li {
-    margin-bottom: 9px;
 
     font-size: 16px;
 }
 
-/* =========================================
-   IMAGENS DAS POSTAGENS
-========================================= */
 
-.post-efeito img,
-.post-vacinacao img {
-    display: block;
-
-    width: 100%;
-
-    max-width: 500px;
-
-    height: auto;
-
-    margin: 22px auto;
-
-    border-radius: 14px;
-
-    box-shadow:
-        0 6px 18px rgba(0, 0, 0, 0.10);
+.about-home .section-tag {
+    color: #dbeafe;
 }
 
-/* =========================================
-   VÍDEOS
-========================================= */
 
-.post-efeito video {
-    display: block;
-
-    width: 300px;
-
-    max-width: 100%;
-
-    height: auto;
-
-    margin: 25px auto;
-
-    border-radius: 14px;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.post-vacinacao video {
-    display: block;
-
-    width: 100%;
-
-    max-width: 640px;
-
-    height: auto;
-
-    margin: 25px auto;
-
-    border-radius: 14px;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* =========================================
-   LINK VOLTAR
-========================================= */
-
-.back-link {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 5px;
-
-    margin-bottom: 25px;
-
-    color: #1769aa;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    transition: color 0.2s ease;
-}
-
-.back-link:hover {
-    color: #0d47a1;
-
-    text-decoration: underline;
-}
-
-/* =========================================
-   DESTAQUE DA VACINAÇÃO
-========================================= */
-
-.destaque {
-    margin-top: 35px;
-
-    padding: 20px;
-
-    text-align: center;
-
-    background: #eef6ff;
-
-    border: 1px solid #d6e9ff;
-
-    border-radius: 14px;
-
-    color: #1557a6 !important;
-
-    font-size: 19px !important;
-}
-
-/* =========================================
-   BOTÕES
-========================================= */
-
-.btn {
+.text-button {
     display: inline-block;
 
-    padding: 11px 20px;
-
-    background: #1565c0;
+    margin-top: 10px;
 
     color: white;
 
-    border: none;
-
-    border-radius: 9px;
-
     text-decoration: none;
-
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition:
-        background 0.25s ease,
-        transform 0.2s ease;
-}
-
-.btn:hover {
-    background: #0d47a1;
-
-    transform: translateY(-2px);
-}
-
-/* =========================================
-   TABELAS
-========================================= */
-
-table {
-    width: 100%;
-
-    margin: 25px 0;
-
-    border-collapse: collapse;
-
-    overflow: hidden;
-
-    background: white;
-
-    border-radius: 10px;
-}
-
-th {
-    padding: 13px;
-
-    background: #0f3b82;
-
-    color: white;
-
-    text-align: left;
-}
-
-td {
-    padding: 13px;
-
-    border-bottom: 1px solid #e5eaf2;
-
-    color: #34495e;
-}
-
-tr:hover {
-    background: #f5f8fc;
-}
-
-/* =========================================
-   SOBRE
-========================================= */
-
-.sobre-card {
-    max-width: 900px;
-}
-
-.sobre-card p {
-    font-size: 17px;
-}
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-    max-width: 1000px;
-
-    margin: 50px auto 0;
-
-    padding: 25px 0;
-
-    border-top: 1px solid #dfe5ec;
-
-    color: #66788a;
-
-    font-size: 14px;
-
-    text-align: center;
-}
-
-/* =========================================
-   RESPONSIVIDADE
-========================================= */
-
-@media (max-width: 900px) {
-
-    .sidebar {
-        width: 220px;
-    }
-
-    .content {
-        width: calc(100% - 220px);
-
-        margin-left: 220px;
-
-        padding: 30px;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-
-}
-
-/* =========================================
-   CELULAR
-========================================= */
-
-@media (max-width: 700px) {
-
-    .layout {
-        display: block;
-    }
-
-    .sidebar {
-        position: relative;
-
-        width: 100%;
-
-        min-height: auto;
-
-        padding: 20px;
-    }
-
-    .sidebar h2 {
-        margin-bottom: 20px;
-    }
-
-    .sidebar ul {
-        display: flex;
-
-        flex-wrap: wrap;
-
-        gap: 6px;
-    }
-
-    .sidebar li {
-        margin: 0;
-    }
-
-    .sidebar li > b {
-        width: 100%;
-
-        margin: 15px 5px 5px;
-    }
-
-    .sidebar a {
-        padding: 9px 11px;
-
-        font-size: 14px;
-    }
-
-    .content {
-        width: 100%;
-
-        margin-left: 0;
-
-        padding: 20px 15px;
-    }
-
-    .card {
-        padding: 24px 20px;
-
-        border-radius: 15px;
-    }
-
-    .intro {
-        padding: 25px 20px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    .hero {
-        padding: 28px 22px;
-
-        border-radius: 16px;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .post-efeito p,
-    .post-vacinacao p {
-        font-size: 16px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-}
-/* =========================================
-   LINK DOS CARDS
-========================================= */
-
-.card-link {
-    display: inline-block;
-
-    margin-top: 15px;
-
-    color: #1769aa;
-
-    font-size: 14px;
 
     font-weight: 700;
 
-    transition: transform 0.2s ease;
+    font-size: 14px;
 }
 
-.cards .card:hover .card-link {
-    transform: translateX(4px);
+
+.about-symbol {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 90px;
 }
 
 
 /* =========================================
-   BLOCO FINAL DA HOME
+   RODAPÉ DA HOME
 ========================================= */
 
-.home-final {
-    margin-top: 40px;
-
-    text-align: center;
-}
-
-.home-final h2 {
+.site-footer {
     margin-top: 0;
 
-    color: #1557a6;
+    padding: 35px 20px;
+
+    border-top: 1px solid #e1e8f0;
+
+    background: white;
+
+    text-align: center;
+
+    color: #718096;
+
+    font-size: 13px;
 }
 
-.home-final p {
-    max-width: 700px;
 
-    margin: auto;
+.site-footer p {
+    margin: 4px 0;
+
+    color: #718096;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE DA HOME
+========================================= */
+
+@media (max-width: 850px) {
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero-text {
+        margin: auto;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 280px;
+    }
+
+    .modern-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-home {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .about-home p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-symbol {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .topbar-container {
+        padding: 13px 16px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .nav {
+        gap: 2px;
+    }
+
+    .nav a {
+        padding: 8px 9px;
+
+        font-size: 13px;
+    }
+
+    .home-hero {
+        min-height: auto;
+    }
+
+    .hero-inner {
+        padding: 60px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .science-icon {
+        width: 150px;
+
+        height: 150px;
+
+        font-size: 70px;
+    }
+
+    .floating-card {
+        font-size: 11px;
+
+        padding: 8px 11px;
+    }
+
+    .home-section,
+    .topics-section {
+        padding: 55px 18px;
+    }
+
+    .section-header h2 {
+        font-size: 27px;
+    }
+
+    .modern-card-image {
+        height: 210px;
+    }
+
+    .about-home {
+        padding: 30px 22px;
+
+        margin-top: 30px;
+    }
+
 }
