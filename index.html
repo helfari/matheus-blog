@@ -4,88 +4,58 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Ciência com Matheus</title>
 
+<meta
+    name="description"
+    content="Ciência com Matheus — conteúdos, estudos, experimentos e curiosidades de Ciências."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
 <link rel="stylesheet" href="css/style.css">
 
-<style>
-
-/* GRID DE CARDS */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-/* CARD */
-.card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: 0.3s;
-  text-decoration: none;
-  color: inherit;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* IMAGEM */
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-/* CONTEÚDO */
-.card-content {
-  padding: 15px;
-}
-
-.card h3 {
-  margin: 0;
-  color: #0f3b82;
-}
-
-.card p {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #555;
-}
-
-/* APRESENTAÇÃO */
-.intro {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  margin-bottom: 25px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-</style>
-
 </head>
+
 
 <body>
 
 <div class="layout">
 
+
+<!-- =========================================
+     MENU LATERAL
+========================================= -->
+
 <aside class="sidebar">
 
-<h2>🔬 Ciência</h2>
+<h2>
+🔬 Ciência<br>
+com Matheus
+</h2>
 
 <ul>
 
 <li>
-<a href="index.html">Início</a>
+<a href="index.html" class="active">
+🏠 Início
+</a>
 </li>
 
 <li>
-<a href="sobre.html">Sobre</a>
+<a href="sobre.html">
+ℹ️ Sobre
+</a>
 </li>
 
 <li>
@@ -109,67 +79,120 @@
 </aside>
 
 
+
+<!-- =========================================
+     CONTEÚDO PRINCIPAL
+========================================= -->
+
 <main class="content">
 
-<!-- APRESENTAÇÃO -->
 
-<div class="intro">
+<!-- =========================================
+     APRESENTAÇÃO
+========================================= -->
 
-<h1>👋 Bem-vindo ao blog</h1>
+<section class="intro">
+
+<h1>
+👋 Bem-vindo ao Ciência com Matheus
+</h1>
 
 <p>
-Olá! Meu nome é Matheus Henrique, tenho 12 anos e sou aluno da 7ª série da Escola Prisma.
+Olá! Meu nome é <strong>Matheus Henrique</strong>,
+tenho 12 anos e sou aluno da 7ª série da Escola Prisma.
 </p>
 
 <p>
-Este blog foi criado para compartilhar meus estudos de Ciências, incluindo experimentos,
-curiosidades e vídeos educativos.
+Este blog foi criado para compartilhar meus estudos de
+<strong>Ciências</strong>, incluindo atividades,
+experimentos, curiosidades e vídeos educativos.
 </p>
 
-</div>
+</section>
 
 
-<!-- CARDS -->
+
+<!-- =========================================
+     CONTEÚDOS
+========================================= -->
+
+<section>
+
+<h2>
+📚 Conteúdos de Ciências
+</h2>
+
+<p>
+Confira algumas das atividades e temas que estou estudando.
+</p>
+
 
 <div class="cards">
 
 
-<!-- CARD 1 - EFEITO ESTUFA -->
+<!-- =========================================
+     CARD — EFEITO ESTUFA
+========================================= -->
 
-<a href="posts/efeito-estufa.html" class="card">
+<a
+    href="posts/efeito-estufa.html"
+    class="card"
+>
 
 <img
-src="https://matheusfaria-blog-objects.s3.us-east-1.amazonaws.com/efeito-estufa-card.JPG"
-alt="Efeito Estufa">
+    src="https://matheusfaria-blog-objects.s3.us-east-1.amazonaws.com/efeito-estufa-card.JPG"
+    alt="Imagem representando o efeito estufa"
+>
 
 <div class="card-content">
 
-<h3>🌍 Efeito Estufa</h3>
+<h3>
+🌍 Efeito Estufa
+</h3>
 
 <p>
-Entenda como funciona o efeito estufa e quais são suas consequências.
+Entenda o que é o efeito estufa, como ele funciona
+e quais podem ser suas consequências para o planeta.
 </p>
+
+<span class="card-link">
+Ler conteúdo →
+</span>
 
 </div>
 
 </a>
 
 
-<!-- CARD 2 - VACINAÇÃO -->
 
-<a href="posts/vacinacao.html" class="card">
+<!-- =========================================
+     CARD — VACINAÇÃO
+========================================= -->
+
+<a
+    href="posts/vacinacao.html"
+    class="card"
+>
 
 <img
-src="https://matheusfaria-blog-objects.s3.us-east-1.amazonaws.com/vacinacao-card.JPG"
-alt="Importância da Vacinação">
+    src="https://matheusfaria-blog-objects.s3.us-east-1.amazonaws.com/vacinacao-card.JPG"
+    alt="Imagem representando a importância da vacinação"
+>
 
 <div class="card-content">
 
-<h3>💉 Importância da Vacinação</h3>
+<h3>
+💉 Importância da Vacinação
+</h3>
 
 <p>
-Entenda como as vacinas ajudam a proteger as pessoas e a prevenir doenças.
+Entenda como as vacinas ajudam a proteger
+as pessoas e prevenir diversas doenças.
 </p>
+
+<span class="card-link">
+Ler conteúdo →
+</span>
 
 </div>
 
@@ -177,6 +200,29 @@ Entenda como as vacinas ajudam a proteger as pessoas e a prevenir doenças.
 
 
 </div>
+
+</section>
+
+
+
+<!-- =========================================
+     MENSAGEM FINAL
+========================================= -->
+
+<section class="intro home-final">
+
+<h2>
+🔎 Aprender é descobrir!
+</h2>
+
+<p>
+A ciência está presente em nosso dia a dia.
+Aqui compartilho um pouco do que estou aprendendo
+nas aulas de Ciências.
+</p>
+
+</section>
+
 
 </main>
 
